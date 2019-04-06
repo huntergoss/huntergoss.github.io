@@ -10,53 +10,53 @@ project 1 - A Random Quote Generator
 
 var intervalId;
 
-var gameQuotes = [
+var quotes = [
   {
     quote: "We all make choices in life, but in the end our choices make us.",
-    author: "Andrew Ryan",
-    game: "BioShock",
+    source: "Andrew Ryan",
+    citation: "BioShock",
     year: "2007",
     tags: "#fps #rpg"
   },
   {
     quote: "A hero need not speak. When he is gone, the world will speak for him.",
-    author: "Master Chief",
-    game: "Halo",
+    source: "Master Chief",
+    citation: "Halo",
     year: "2001",
     tags: "#fps"
   },
   {
     quote: "It's time to kick ass and chew bubblegum... and I'm all outta gum.",
-    author: "Duke Nukem",
-    game: "Duke Nuke 3D",
+    source: "Duke Nukem",
+    citation: "Duke Nuke 3D",
     year: "1996",
     tags: "#fps"
   },
   {
     quote: "Don't wish it were easier, wish you were better.",
-    author: "Chief",
-    game: "Animal Crossing",
+    source: "Chief",
+    citation: "Animal Crossing",
     year: "2001",
     tags: "#sim"
   },
   {
     quote: "Good men mean well. We just don't always end up doing well.",
-    author: "Isaac Clarke",
-    game: "Dead Space",
+    source: "Isaac Clarke",
+    citation: "Dead Space",
     year: "2008",
     tags: "#rpg #survival"
   },
   {
     quote: "What is a man? A miserable little pile of secrets.",
-    author: "Dracula",
-    game: "Castlevania: Symphony of the Night",
+    source: "Dracula",
+    citation: "Castlevania: Symphony of the Night",
     year: "1997",
     tags: "#rpg"
   },
   {
     quote: "No matter how dark the night, morning always comes, and our journey begins anew.",
-    author: "Lulu",
-    game: "Final Fantasy X",
+    source: "Lulu",
+    citation: "Final Fantasy X",
     year: "2001",
     tags: "#rpg"
   }
@@ -69,8 +69,8 @@ var gameQuotes = [
 ***/
 
 function getRandomQuote() {
-  var randomNumber = Math.floor(Math.random() * gameQuotes.length);
-  var randomQuote = gameQuotes[randomNumber];
+  var randomNumber = Math.floor(Math.random() * quotes.length);
+  var randomQuote = quotes[randomNumber];
 
   return randomQuote;
 }
@@ -100,10 +100,10 @@ function printQuote() {
   var html = '';
 
   html += '<p class="quote">' + newQuote.quote + '</p>';
-  html += '<p class="source">' + newQuote.author;
+  html += '<p class="source">' + newQuote.source;
 
-  if (newQuote.game) {
-    html += '<span class="citation">' + newQuote.game + '</span>';
+  if (newQuote.citation) {
+    html += '<span class="citation">' + newQuote.citation + '</span>';
   }
   if (newQuote.year) {
     html += '<span class="year">' + newQuote.year + '</span>'
