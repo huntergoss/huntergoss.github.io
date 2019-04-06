@@ -10,6 +10,14 @@ project 1 - A Random Quote Generator
 
 var intervalId;
 
+// This function calls the printQuote function every 20 seconds
+
+function startInterval() {
+intervalId = setInterval(printQuote, 20000);
+}
+
+startInterval();
+
 var quotes = [
   {
     quote: "We all make choices in life, but in the end our choices make us.",
@@ -87,6 +95,13 @@ function randomColor() {
   return 'rgb(' + randomRed + ',' + randomGreen + ',' + randomBlue + ')';
 }
 
+// This function resets the interval timer back to 0 and calls printQuote after 20 seconds
+
+function resetInterval() {
+  clearInterval(intervalId);
+  intervalId = setInterval(printQuote, 20000);
+}
+
 /***
   This function is called by our button listener to present a new quote to the screen.
   Uses getRandomQuote function to randomly pick a new quote from our array, then it
@@ -115,12 +130,9 @@ function printQuote() {
 
   document.getElementById('quote-box').innerHTML = html;
   document.body.style.backgroundColor = randomColor();
+  resetInterval();
 }
 
-
-// This calls the printQuote function every 20 seconds
-
-intervalId = setInterval(printQuote, 20000);
 
 /***
   When the "Show another quote" button is clicked, the event listener 
