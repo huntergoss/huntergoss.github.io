@@ -1,1 +1,2 @@
 # Random-Quote-Generator
+This is the first project assigned from the FSJS Techdegree with TeamTreeHouse. Simply put, it is a random quote generator with a button that allows you to cycle through an array of quote objects. It also has a timing interval of 20 seconds to rotate through quotes if the button is not pressed. I decided to use some of my favorite game quotes over the years as my data for the project.

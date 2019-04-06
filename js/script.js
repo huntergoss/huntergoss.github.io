@@ -37,7 +37,7 @@ var gameQuotes = [
     author: "Chief",
     game: "Animal Crossing",
     year: "2001",
-    tags: "sim"
+    tags: "#sim"
   },
   {
     quote: "Good men mean well. We just don't always end up doing well.",
@@ -51,7 +51,7 @@ var gameQuotes = [
     author: "Dracula",
     game: "Castlevania: Symphony of the Night",
     year: "1997",
-    tags: "rpg"
+    tags: "#rpg"
   },
   {
     quote: "No matter how dark the night, morning always comes, and our journey begins anew.",
