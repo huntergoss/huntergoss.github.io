@@ -44,13 +44,13 @@ function appendPageLinks (list) {
    const pageElement = document.querySelector('.page');
    const div = document.createElement('div');
    const ul = document.createElement('ul');
-   const numberOfPages = list.length / numberOfItems;
+   const numberOfPages = Math.ceil(list.length / numberOfItems);
  
    div.className = 'pagination';
    pageElement.appendChild(div);
    div.appendChild(ul);
 
-   for (var i = 1; i < numberOfPages; i++) {
+   for (var i = 1; i <= numberOfPages; i++) {
       const li = document.createElement('li');
       const a = document.createElement('a');
       a.href = "#";
@@ -107,6 +107,9 @@ function appendSearchBar() {
 
 function performSearch (searchInput, students) {
    const searchArray = [];
+   if (!searchInput.value){
+      return resetPage(studentList);
+   }
    for (let i = 0; i < students.length; i++) {
       const studentName = students[i].querySelector('h3').textContent;
       const inputValue = searchInput.value;
