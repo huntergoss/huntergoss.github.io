@@ -28,7 +28,7 @@ function showPage (list, page) {
    const endIndex = page * numberOfItems;
 
    for (var i = 0; i < list.length; i++) {
-      if (i >= startIndex && i <= endIndex) {
+      if (i >= startIndex && i < endIndex) {
          list[i].style.display = "";
       } 
       else
