@@ -6,3 +6,4 @@ This project will use JS to paginate a list provided and enhance an html page wi
 Js will be used primarily for this project. Methods including dom manipulation and traversing.
 
 Extra Credit features:
+Search functionality
